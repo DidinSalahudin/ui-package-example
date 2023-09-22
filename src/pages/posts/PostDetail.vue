@@ -1,9 +1,9 @@
 <template>
     <button @click="handleClickBack" class="btn btn-primary">Go Back</button>
     <div class="card mt-2">
-        <div class="card-body" v-if="data">
-            <h5 class="card-title">{{ data.title }}</h5>
-            <p class="card-text">{{ data.body }}</p>
+        <div class="card-body">
+            <h5 class="card-title">{{ title }}</h5>
+            <p class="card-text">{{ body }}</p>
         </div>
     </div>
 </template>
@@ -16,12 +16,14 @@
     const route  = useRoute();
     const router = useRouter();
 
-    const data = ref(null)
+    const title = ref(null)
+    const body  = ref(null)
 
     onMounted(() => {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)
         .then((RESPONSE) => {
-            data.value = RESPONSE.data;
+            title.value = RESPONSE.data.title;
+            body.value  = RESPONSE.data.body;
         })
         .catch((ERROR) => {
             
