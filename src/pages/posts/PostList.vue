@@ -24,12 +24,21 @@
     import axios from 'axios';
     import { onMounted, Ref, ref } from 'vue';
 
-    const datas: Ref<never[]> = ref([]);
+    type ListDatas = {
+        userId?: Number,
+        id?: Number,
+        title?: String
+        body?: String
+    }
+
+    const datas: Ref<Array<ListDatas>> = ref([]);
 
     onMounted(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then((RESPONSE) => {
             datas.value = RESPONSE.data;
+            console.log(RESPONSE.data);
+            
         })
         .catch((ERROR) => {        
         })
