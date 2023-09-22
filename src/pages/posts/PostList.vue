@@ -25,10 +25,10 @@
     import { onMounted, Ref, ref } from 'vue';
 
     type ListDatas = {
-        userId?: Number,
-        id?: Number,
-        title?: String
-        body?: String
+        userId?: number,
+        id?: number,
+        title?: string
+        body?: string
     }
 
     const datas: Ref<Array<ListDatas>> = ref([]);
@@ -37,8 +37,6 @@
         axios.get('https://jsonplaceholder.typicode.com/posts')
         .then((RESPONSE) => {
             datas.value = RESPONSE.data;
-            console.log(RESPONSE.data);
-            
         })
         .catch((ERROR) => {        
         })
