@@ -1,6 +1,6 @@
 {
   "name": "@DidinSalahudin/ui-package-example",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "files": [
     "dist"
@@ -15,7 +15,7 @@
   },
   "types": "./dist/types/index.d.ts",
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/@DidinSalahudin"
+    "@DidinSalahudin:registry": "https://npm.pkg.github.com/"
   },
   "repository": {
     "type": "git",
