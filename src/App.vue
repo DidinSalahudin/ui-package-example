@@ -1,7 +1,11 @@
 <script setup lang="ts">
-import { BaseButton } from "./index";
 </script>
 
 <template>
-  <BaseButton> Click me </BaseButton>
+  
+  <main>
+    <div class="container mt-5">
+      <router-view />
+    </div>
+  </main>
 </template>
