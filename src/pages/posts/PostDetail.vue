@@ -10,14 +10,14 @@
 
 <script setup lang="ts">
     import axios from 'axios';
-    import { onMounted, ref } from 'vue';
+    import { onMounted, Ref, ref } from 'vue';
     import { useRoute, useRouter } from 'vue-router';
     
     const route  = useRoute();
     const router = useRouter();
 
-    const title = ref(null)
-    const body  = ref(null)
+    const title: Ref<null> = ref(null)
+    const body: Ref<null>  = ref(null)
 
     onMounted(() => {
         axios.get(`https://jsonplaceholder.typicode.com/posts/${route.params.id}`)

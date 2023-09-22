@@ -22,9 +22,9 @@
 
 <script setup lang="ts">
     import axios from 'axios';
-    import { onMounted, ref } from 'vue';
+    import { onMounted, Ref, ref } from 'vue';
 
-    const datas = ref([]);
+    const datas: Ref<never[]> = ref([]);
 
     onMounted(() => {
         axios.get('https://jsonplaceholder.typicode.com/posts')
