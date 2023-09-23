@@ -1,6 +1,6 @@
 {
   "name": "@DidinSalahudin/ui-package-example",
-  "version": "0.0.003",
+  "version": "0.0.4",
   "type": "module",
   "files": [
     "dist"
